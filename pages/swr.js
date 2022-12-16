@@ -22,7 +22,7 @@ export default function Page3() {
 			<main className={styles.main}>
 				<h1 className={inter.className}><a href="https://swr.vercel.app/">SWR - React Hooks for Data Fetching</a></h1>
 
-				<p className={inter.className}><Link href="/">Home</Link></p>
+				<p className={inter.className}>⬅️ <Link href="/">Back Home</Link></p>
 
 				<ul>
 					{data.data.map((item) => (

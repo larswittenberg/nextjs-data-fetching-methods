@@ -17,7 +17,7 @@ export default function Page4({ fallback }) {
 			<main className={styles.main}>
 				<h1 className={inter.className}><a href="https://swr.vercel.app/docs/with-nextjs">SSG + SWR</a></h1>
 
-				<p className={inter.className}><Link href="/">Home</Link></p>
+				<p className={inter.className}>⬅️ <Link href="/">Back Home</Link></p>
 
 				<SWRConfig value={{ fallback }}>
 					<Article />

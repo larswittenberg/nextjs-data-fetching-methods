@@ -14,7 +14,7 @@ export default function Page2({ data }) {
 			<main className={styles.main}>
 				<h1 className={inter.className}>SSR (Server-Side Rendering / <a href="https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props">getServerSideProps</a>)</h1>
 
-				<p className={inter.className}><Link href="/">Home</Link></p>
+				<p className={inter.className}>⬅️ <Link href="/">Back Home</Link></p>
 
 				<ul>
 					{data.data.map((item) => (

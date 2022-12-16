@@ -2,8 +2,7 @@
   "name": "nextjs-data-fetching-methods",
   "version": "0.1.0",
   "description": "Demo project for SSG, SSR, ISR, SWR",
-  "version": "1.1.0",
-  "homepage": "https:/nextjs-data-fetching-methods.vercel.app/",
+  "homepage": "https://nextjs-data-fetching-methods.vercel.app/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

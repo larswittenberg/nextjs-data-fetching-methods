@@ -14,7 +14,7 @@ export default function Page1({ data }) {
 			<main className={styles.main}>
 				<h1 className={inter.className}>SSG (Static Site Generation / <a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">getStaticProps</a>) with <a href="https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration">ISR</a></h1>
 
-				<p className={inter.className}><Link href="/">Home</Link></p>
+				<p className={inter.className}>⬅️ <Link href="/">Back Home</Link></p>
 
 				<ul>
 					{data.data.map((item) => (

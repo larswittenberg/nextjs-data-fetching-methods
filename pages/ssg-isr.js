@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Page1({ data }) {
 	return (
@@ -12,13 +9,13 @@ export default function Page1({ data }) {
 				<title>SSG + ISR</title>
 			</Head>
 			<main className={styles.main}>
-				<h1 className={inter.className}>SSG (Static Site Generation / <a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">getStaticProps</a>) + <a href="https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration">ISR</a></h1>
+				<h1>SSG (Static Site Generation / <a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">getStaticProps</a>) + <a href="https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration">ISR</a></h1>
 
-				<p className={inter.className}>⬅️ <Link href="/">Back Home</Link></p>
+				<p>⬅️ <Link href="/">Back Home</Link></p>
 
 				<ul>
 					{data.data.map((item) => (
-						<li key={item.id} className={inter.className}>{item.title}</li>
+						<li key={item.id}>{item.title}</li>
 					))}
 				</ul>
 			</main>

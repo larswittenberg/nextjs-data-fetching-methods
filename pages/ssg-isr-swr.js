@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import useSWR, { SWRConfig } from 'swr'
-import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
@@ -15,9 +12,9 @@ export default function Page5({ fallback }) {
 				<title>SSG + ISR + SWR</title>
 			</Head>
 			<main className={styles.main}>
-				<h1 className={inter.className}><a href="https://swr.vercel.app/docs/with-nextjs">SSG + ISR + SWR</a></h1>
+				<h1><a href="https://swr.vercel.app/docs/with-nextjs">SSG + ISR + SWR</a></h1>
 
-				<p className={inter.className}>⬅️ <Link href="/">Back Home</Link></p>
+				<p>⬅️ <Link href="/">Back Home</Link></p>
 
 				<SWRConfig value={{ fallback }}>
 					<Article />
@@ -41,7 +38,7 @@ function Article() {
 	return (
 		<ul>
 			{data.data.map((item) => (
-				<li key={item.id} className={inter.className}>{item.title}</li>
+				<li key={item.id}>{item.title}</li>
 			))}
 		</ul>
 	)

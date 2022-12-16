@@ -37,6 +37,10 @@ export default function Home() {
 
 				<div className={styles.center}>
 					<Link href="/ssg" className={styles.card}>
+						<h2 className={inter.className}>Static Site Generation</h2>
+					</Link>
+					<br />
+					<Link href="/ssg-isr" className={styles.card}>
 						<h2 className={inter.className}>Static Site Generation + ISR</h2>
 					</Link>
 					<br />
@@ -49,11 +53,11 @@ export default function Home() {
 					</Link>
 					<br />
 					<Link href="/ssg-swr" className={styles.card}>
-						<h2 className={inter.className}>SSG + SWR</h2>
+						<h2 className={inter.className}>Static Site Generation + SWR</h2>
 					</Link>
 					<br />
 					<Link href="/ssg-isr-swr" className={styles.card}>
-						<h2 className={inter.className}>SSG + ISR + SWR</h2>
+						<h2 className={inter.className}>Static Site Generation + ISR + SWR</h2>
 					</Link>
 				</div>
 

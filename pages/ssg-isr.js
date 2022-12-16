@@ -5,14 +5,14 @@ import styles from '../styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Page2({ data }) {
+export default function Page1({ data }) {
 	return (
 		<>
 			<Head>
-				<title>SSR</title>
+				<title>SSG + ISR</title>
 			</Head>
 			<main className={styles.main}>
-				<h1 className={inter.className}>SSR (Server-Side Rendering / <a href="https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props">getServerSideProps</a>)</h1>
+				<h1 className={inter.className}>SSG (Static Site Generation / <a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">getStaticProps</a>) + <a href="https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration">ISR</a></h1>
 
 				<p className={inter.className}>⬅️ <Link href="/">Back Home</Link></p>
 
@@ -28,13 +28,17 @@ export default function Page2({ data }) {
 
 
 // This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
 	const res = await fetch('https://thtp1a9i.directus.app/items/articles')
 	const data = await res.json()
 
 	return {
 		props: {
 			data,
-		}
+		},
+		// Next.js will attempt to re-generate the page:
+		// - When a request comes in
+		// - At most once every 10 seconds
+		revalidate: 10, // In seconds
 	}
 }

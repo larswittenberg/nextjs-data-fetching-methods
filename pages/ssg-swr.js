@@ -50,7 +50,6 @@ function Article() {
 
 // This gets called on every request
 export async function getStaticProps() {
-	// Fetch data from external API
 	const res = await fetch('https://thtp1a9i.directus.app/items/articles')
 	const data = await res.json()
 

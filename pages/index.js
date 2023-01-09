@@ -75,6 +75,11 @@ export default function Home() {
 						<h2>05. Server-Side Rendering</h2>
 					</Link>
 					<br />
+
+					<Link href="/06-ssr-swr" className={styles.card}>
+						<h2>06. Server-Side Rendering + SWR</h2>
+					</Link>
+					<br />
 				</div>
 
 				<div className={styles.grid}></div>

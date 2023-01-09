@@ -14,12 +14,19 @@ export default function Page3() {
 	return (
 		<>
 			<Head>
-				<title>SWR</title>
+				<title>00. SWR - React Hooks for Data Fetching</title>
 			</Head>
 			<main className={styles.main}>
-				<h1><a href="https://swr.vercel.app/">SWR - React Hooks for Data Fetching</a></h1>
+				<h1>
+					<a href="https://swr.vercel.app/">
+						SWR (stale-while-revalidate) - React Hooks for Data
+						Fetching
+					</a>
+				</h1>
 
-				<p>⬅️ <Link href="/">Back Home</Link></p>
+				<p>
+					⬅️ <Link href="/">Back Home</Link>
+				</p>
 
 				<ul>
 					{data.data.map((item) => (

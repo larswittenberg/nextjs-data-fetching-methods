@@ -9,12 +9,24 @@ export default function Page5({ fallback }) {
 	return (
 		<>
 			<Head>
-				<title>SSG + ISR + SWR</title>
+				<title>04. SSG + SWR + ISR</title>
 			</Head>
 			<main className={styles.main}>
-				<h1><a href="https://swr.vercel.app/docs/with-nextjs">SSG + ISR + SWR</a></h1>
+				<h1>
+					SSG - Static Site Generation (
+					<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">
+						getStaticProps
+					</a>
+					) +{" "}
+					<a href="https://swr.vercel.app/docs/with-nextjs">SWR</a> +{" "}
+					<a href="https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration">
+						ISR
+					</a>
+				</h1>
 
-				<p>⬅️ <Link href="/">Back Home</Link></p>
+				<p>
+					⬅️ <Link href="/">Back Home</Link>
+				</p>
 
 				<SWRConfig value={{ fallback }}>
 					<Article />

@@ -6,12 +6,20 @@ export default function Page1({ data }) {
 	return (
 		<>
 			<Head>
-				<title>SSG + ISR</title>
+				<title>01. SSG</title>
 			</Head>
 			<main className={styles.main}>
-				<h1>SSG (Static Site Generation / <a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">getStaticProps</a>)</h1>
+				<h1>
+					SSG - Static Site Generation (
+					<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">
+						getStaticProps
+					</a>
+					)
+				</h1>
 
-				<p>⬅️ <Link href="/">Back Home</Link></p>
+				<p>
+					⬅️ <Link href="/">Back Home</Link>
+				</p>
 
 				<ul>
 					{data.data.map((item) => (

@@ -9,58 +9,76 @@ export default function Home() {
 		<>
 			<Head>
 				<title>Next.js data fetching methods</title>
-				<meta name="description" content="Demo project for SSG, SSR, ISR, SWR" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta
+					name="description"
+					content="Demo project for SSG, SSR, ISR, SWR"
+				/>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1"
+				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
 				<div className={styles.description}>
 					<div>
 						<a
-						href="https://nextjs.org/"
-						target="_blank"
-						rel="noopener noreferrer"
+							href="https://nextjs.org/"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
-						<Image
-							src="/next.svg"
-							alt="Next.js Logo"
-							className={styles.nextLogo}
-							width={100}
-							height={24}
-							priority
-						/>
+							<Image
+								src="/next.svg"
+								alt="Next.js Logo"
+								className={styles.nextLogo}
+								width={100}
+								height={24}
+								priority
+							/>
 						</a>
 					</div>
 				</div>
 
 				<div className={styles.center}>
-					<Link href="/ssg" className={styles.card}>
-						<h2>Static Site Generation</h2>
+					<Link href="/00-swr" className={styles.card}>
+						<h2>00. SWR - React Hooks for Data Fetching</h2>
 					</Link>
 					<br />
-					<Link href="/ssg-isr" className={styles.card}>
-						<h2>Static Site Generation + ISR</h2>
+
+					<hr />
+					<br />
+
+					<Link href="/01-ssg" className={styles.card}>
+						<h2>01. Static Site Generation</h2>
 					</Link>
 					<br />
-					<Link href="/ssr" className={styles.card}>
-						<h2>Server-Side Rendering</h2>
+
+					<Link href="/02-ssg-isr" className={styles.card}>
+						<h2>02. Static Site Generation + ISR</h2>
 					</Link>
 					<br />
-					<Link href="/swr" className={styles.card}>
-						<h2>SWR - React Hooks for Data Fetching</h2>
+
+					<Link href="/03-ssg-swr" className={styles.card}>
+						<h2>03. Static Site Generation + SWR</h2>
 					</Link>
 					<br />
-					<Link href="/ssg-swr" className={styles.card}>
-						<h2>Static Site Generation + SWR</h2>
+
+					<Link href="/04-ssg-swr-isr" className={styles.card}>
+						<h2>04. Static Site Generation + SWR + ISR</h2>
 					</Link>
 					<br />
-					<Link href="/ssg-isr-swr" className={styles.card}>
-						<h2>Static Site Generation + ISR + SWR</h2>
+
+					<hr />
+					<br />
+
+					<Link href="/05-ssr" className={styles.card}>
+						<h2>05. Server-Side Rendering</h2>
 					</Link>
+					<br />
 				</div>
 
 				<div className={styles.grid}></div>
 			</main>
 		</>
-	)
+	);
 }

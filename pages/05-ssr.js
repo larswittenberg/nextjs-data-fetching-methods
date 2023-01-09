@@ -2,11 +2,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-export default function Page2({ data }) {
+export default function Page05({ data }) {
 	return (
 		<>
 			<Head>
-				<title>SSR</title>
+				<title>05. SSR</title>
 			</Head>
 			<main className={styles.main}>
 				<h1>SSR (Server-Side Rendering / <a href="https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props">getServerSideProps</a>)</h1>

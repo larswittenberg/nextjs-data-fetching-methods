@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
-export default function Page5({ fallback }) {
+export default function Page04({ fallback }) {
 	return (
 		<>
 			<Head>

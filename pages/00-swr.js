@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
-export default function Page3() {
+export default function Page00() {
 	const { data, error } = useSWR('https://thtp1a9i.directus.app/items/articles', fetcher)
 
 	if (error) return <div>Failed to load</div>

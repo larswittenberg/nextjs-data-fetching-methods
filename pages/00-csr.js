@@ -40,11 +40,12 @@ export default function Page00() {
 				<br />
 
 				<p>
-					Client-side data fetching is useful when your page doesn't require SEO indexing, when you don't need
-					to pre-render your data, or when the content of your pages needs to update frequently.
+					Client-side data fetching is useful when your page doesn&apos;t require SEO indexing, when you
+					don&apos;t need to pre-render your data, or when the content of your pages needs to update
+					frequently.
 				</p>
 				<p>
-					It's important to note that using client-side data fetching can affect the performance of your
+					It&apos;s important to note that using client-side data fetching can affect the performance of your
 					application and the load speed of your pages.
 				</p>
 

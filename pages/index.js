@@ -21,25 +21,17 @@ export default function Home() {
 			</Head>
 			<main className={styles.main}>
 				<div className={styles.description}>
-					<div>
-						<a
-							href="https://nextjs.org/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Image
-								src="/next.svg"
-								alt="Next.js Logo"
-								className={styles.nextLogo}
-								width={100}
-								height={24}
-								priority
-							/>
-						</a>
-					</div>
+					<h1>
+						Next.js data fetching methods - SSG, SSR, ISR, SWR, CSR
+					</h1>
 				</div>
 
 				<div className={styles.center}>
+					<Link href="/00-csr" className={styles.card}>
+						<h2>00. CSR - Client Side Rendering</h2>
+					</Link>
+					<br />
+
 					<Link href="/00-swr" className={styles.card}>
 						<h2>00. SWR - React Hooks for Data Fetching</h2>
 					</Link>

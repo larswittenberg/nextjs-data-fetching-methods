@@ -11,14 +11,17 @@ export default function Page01({ data }) {
 			<main className={styles.main}>
 				<h1>
 					SSG - Static Site Generation (
-					<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">
-						getStaticProps
-					</a>
-					)
+					<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">getStaticProps</a>)
 				</h1>
 
 				<p>
 					⬅️ <Link href="/">Back Home</Link>
+				</p>
+				<br />
+
+				<p>
+					If you export a function called getStaticProps (Static Site Generation) from a page, Next.js will
+					pre-render this page at build time using the props returned by getStaticProps.
 				</p>
 
 				<ul>

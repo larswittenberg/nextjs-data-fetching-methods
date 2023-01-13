@@ -14,14 +14,24 @@ export default function Page02({ data }) {
 					<a href="https://nextjs.org/docs/basic-features/data-fetching/get-static-props">
 						getStaticProps
 					</a>
-					) +{" "}
-					ISR <a href="https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration">
+					) + ISR{" "}
+					<a href="https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration">
 						(Incremental Static Regeneration)
 					</a>
 				</h1>
 
 				<p>
 					⬅️ <Link href="/">Back Home</Link>
+				</p>
+				<br />
+
+				<p>
+					Next.js allows you to create or update static pages after
+					you’ve built your site. Incremental Static Regeneration
+					(ISR) enables you to use static-generation on a per-page
+					basis, without needing to rebuild the entire site. With ISR,
+					you can retain the benefits of static while scaling to
+					millions of pages.
 				</p>
 
 				<ul>

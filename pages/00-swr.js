@@ -27,6 +27,15 @@ export default function Page00() {
 				<p>
 					⬅️ <Link href="/">Back Home</Link>
 				</p>
+				<br />
+
+				<p>
+					The team behind Next.js has created a React hook library for
+					data fetching called SWR. It is highly recommended if you
+					are fetching data on the client-side. It handles caching,
+					revalidation, focus tracking, refetching on intervals, and
+					more.
+				</p>
 
 				<ul>
 					{data.data.map((item) => (

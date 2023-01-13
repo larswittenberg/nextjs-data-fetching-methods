@@ -1,29 +1,21 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
 	return (
 		<>
 			<Head>
 				<title>Next.js data fetching methods</title>
-				<meta
-					name="description"
-					content="Demo project for SSG, SSR, ISR, SWR"
-				/>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1"
-				/>
+				<meta name="description" content="Demo project for SSG, SSR, ISR, SWR" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
 				<div className={styles.description}>
-					<h1>
-						Next.js data fetching methods - SSG, SSR, ISR, SWR, CSR
-					</h1>
+					<h1>Next.js data fetching methods - SSG, SSR, ISR, SWR, CSR</h1>
 				</div>
 
 				<div className={styles.center}>

@@ -1,15 +1,15 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import useSWR from 'swr'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import useSWR from 'swr';
+import styles from '../styles/Home.module.css';
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json())
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Page00() {
-	const { data, error } = useSWR('https://thtp1a9i.directus.app/items/articles', fetcher)
+	const { data, error } = useSWR('https://thtp1a9i.directus.app/items/articles', fetcher);
 
-	if (error) return <div>Failed to load</div>
-	if (!data) return <div>Loading...</div>
+	if (error) return <div>Failed to load</div>;
+	if (!data) return <div>Loading...</div>;
 
 	return (
 		<>
@@ -18,10 +18,7 @@ export default function Page00() {
 			</Head>
 			<main className={styles.main}>
 				<h1>
-					<a href="https://swr.vercel.app/">
-						SWR (stale-while-revalidate) - React Hooks for Data
-						Fetching
-					</a>
+					<a href="https://swr.vercel.app/">SWR (stale-while-revalidate) - React Hooks for Data Fetching</a>
 				</h1>
 
 				<p>
@@ -30,11 +27,9 @@ export default function Page00() {
 				<br />
 
 				<p>
-					The team behind Next.js has created a React hook library for
-					data fetching called SWR. It is highly recommended if you
-					are fetching data on the client-side. It handles caching,
-					revalidation, focus tracking, refetching on intervals, and
-					more.
+					The team behind Next.js has created a React hook library for data fetching called SWR. It is highly
+					recommended if you are fetching data on the client-side. It handles caching, revalidation, focus
+					tracking, refetching on intervals, and more.
 				</p>
 
 				<ul>

@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
 
 export default function Page01({ data }) {
 	return (
@@ -34,15 +34,14 @@ export default function Page01({ data }) {
 	);
 }
 
-
 // This gets called on every request
 export async function getStaticProps() {
-	const res = await fetch('https://thtp1a9i.directus.app/items/articles')
-	const data = await res.json()
+	const res = await fetch('https://thtp1a9i.directus.app/items/articles');
+	const data = await res.json();
 
 	return {
 		props: {
 			data,
 		},
-	}
+	};
 }

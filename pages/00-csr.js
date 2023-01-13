@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -11,7 +11,7 @@ export default function Page00() {
 
 	useEffect(() => {
 		setLoading(true);
-		fetch("https://thtp1a9i.directus.app/items/articles")
+		fetch('https://thtp1a9i.directus.app/items/articles')
 			.then((res) => res.json())
 			.then((data) => {
 				setData(data);
@@ -40,15 +40,12 @@ export default function Page00() {
 				<br />
 
 				<p>
-					Client-side data fetching is useful when your page doesn't
-					require SEO indexing, when you don't need to pre-render your
-					data, or when the content of your pages needs to update
-					frequently.
+					Client-side data fetching is useful when your page doesn't require SEO indexing, when you don't need
+					to pre-render your data, or when the content of your pages needs to update frequently.
 				</p>
 				<p>
-					It's important to note that using client-side data fetching
-					can affect the performance of your application and the load
-					speed of your pages.
+					It's important to note that using client-side data fetching can affect the performance of your
+					application and the load speed of your pages.
 				</p>
 
 				<ul>

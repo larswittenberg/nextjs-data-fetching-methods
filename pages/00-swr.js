@@ -9,7 +9,6 @@ export default function Page00() {
 	const { data, error } = useSWR('https://thtp1a9i.directus.app/items/articles', fetcher);
 
 	if (error) return <div>Failed to load</div>;
-	if (!data) return <div>Loading...</div>;
 
 	return (
 		<>
@@ -32,11 +31,17 @@ export default function Page00() {
 					tracking, refetching on intervals, and more.
 				</p>
 
-				<ul>
-					{data.data.map((item) => (
-						<li key={item.id}>{item.title}</li>
-					))}
-				</ul>
+				{!data ? (
+					<ul>
+						<li>Loading...</li>
+					</ul>
+				) : (
+					<ul>
+						{data.data.map((item) => (
+							<li key={item.id}>{item.title}</li>
+						))}
+					</ul>
+				)}
 			</main>
 		</>
 	);

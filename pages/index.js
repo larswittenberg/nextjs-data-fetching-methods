@@ -66,7 +66,7 @@ export default function Home() {
 					<br />
 				</div>
 
-				<div className={styles.grid}></div>
+				<Image src="/next-build.png" alt="" width={1288} height={678} style={{ maxWidth: '700px', height: 'auto' }} />
 			</main>
 		</>
 	);

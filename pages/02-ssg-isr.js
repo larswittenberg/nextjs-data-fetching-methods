@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export default function Page02({ data }) {
+export default function Page02({ data, time }) {
 	return (
 		<>
 			<Head>
@@ -30,6 +30,8 @@ export default function Page02({ data }) {
 					of pages.
 				</p>
 
+				<p>Uhrzeit: {time}</p>
+
 				<ul>
 					{data.data.map((item) => (
 						<li key={item.id}>{item.title}</li>
@@ -45,9 +47,13 @@ export async function getStaticProps() {
 	const res = await fetch('https://thtp1a9i.directus.app/items/articles');
 	const data = await res.json();
 
+	const now = new Date();
+	let time = `${now.getHours()}:${now.getUTCMinutes()}:${now.getUTCSeconds()}`;
+
 	return {
 		props: {
 			data,
+			time,
 		},
 		// Next.js will attempt to re-generate the page:
 		// - When a request comes in

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export default function Page01({ data }) {
+export default function Page01({ data, time}) {
 	return (
 		<>
 			<Head>
@@ -24,6 +24,8 @@ export default function Page01({ data }) {
 					pre-render this page at build time using the props returned by getStaticProps.
 				</p>
 
+				<p className={styles.mt}>Uhrzeit Build-Time: {time}</p>
+
 				<ul>
 					{data.data.map((item) => (
 						<li key={item.id}>{item.title}</li>
@@ -39,9 +41,13 @@ export async function getStaticProps() {
 	const res = await fetch('https://thtp1a9i.directus.app/items/articles');
 	const data = await res.json();
 
+	const now = new Date();
+	let time = `${now.getHours()}:${now.getUTCMinutes()}:${now.getUTCSeconds()}`;
+
 	return {
 		props: {
 			data,
+			time
 		},
 	};
 }

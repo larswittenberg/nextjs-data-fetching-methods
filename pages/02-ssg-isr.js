@@ -30,7 +30,7 @@ export default function Page02({ data, time }) {
 					of pages.
 				</p>
 
-				<p>Uhrzeit: {time}</p>
+				<p className={styles.mt}>Uhrzeit Build-Time: {time}</p>
 
 				<ul>
 					{data.data.map((item) => (

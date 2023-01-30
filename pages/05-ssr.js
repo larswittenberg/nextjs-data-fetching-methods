@@ -27,11 +27,15 @@ export default function Page05({ data }) {
 					pre-render this page on each request using the data returned by getServerSideProps.
 				</p>
 
-				<ul>
-					{data.data.map((item) => (
-						<li key={item.id}>{item.title}</li>
-					))}
-				</ul>
+				{data.data ? (
+					<ul>
+						{data.data.map((item) => (
+							<li key={item.id}>{item.title}</li>
+						))}
+					</ul>
+				) : null}
+				{data.errors ? <p className={styles.mt}>Error. {data.errors[0].message}</p> : null}
+				{data == 'servererror' ? <p className={styles.mt}>Error. Server nicht erreichbar</p> : null}
 			</main>
 		</>
 	);
@@ -39,8 +43,14 @@ export default function Page05({ data }) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-	const res = await fetch('https://thtp1a9i.directus.app/items/articles');
-	const data = await res.json();
+	let data;
+
+	try {
+		const res = await fetch('https://thtp1a9i.directus.app/items/articles');
+		data = await res.json();
+	} catch (error) {
+		data = 'servererror';
+	}
 
 	return {
 		props: {
